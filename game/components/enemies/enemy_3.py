@@ -1,12 +1,12 @@
 import random
 from game.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
-class Enemy:
+class Enemy3:
     
     X_POS_LIST = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]
-    Y_POS = 20
-    SPEED_X = 5
-    SPEED_Y = 1
+    Y_POS = 100
+    SPEED_X = 7
+    SPEED_Y = 2
     LEFT = 'left'
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]

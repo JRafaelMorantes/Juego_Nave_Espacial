@@ -1,12 +1,12 @@
 import random
-from game.utils.constants import SCREEN_WIDTH
+from game.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 class Enemy2:
     
     X_POS_LIST = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]
-    Y_POS = 20
-    SPEED_X = 7
-    SPEED_Y = 2
+    Y_POS = 80
+    SPEED_X = 10
+    SPEED_Y = 3
     LEFT = 'left'
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]
@@ -19,8 +19,11 @@ class Enemy2:
         self.rect.y = self.Y_POS
         self.mov_x = random.choice(self.MOV_X)
         self.index = 0
+        self.is_alive = True
     
     def update(self):
+        if self.rect.y >= SCREEN_HEIGHT:
+            self.is_alive = False
         self.rect.y += self.SPEED_Y
         if self.mov_x == self.LEFT:
             self.rect.x -= self.SPEED_X
