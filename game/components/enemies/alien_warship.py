@@ -1,8 +1,8 @@
 import pygame
-from game.components.enemies.enemy import Enemy
+from game.components.enemies.enemy_2 import Enemy2
 from game.utils.constants import ENEMY_3
 
-class AlienWarShip(Enemy):
+class AlienWarShip(Enemy2):
     
     WIDTH = 70
     HEIGHT = 80
