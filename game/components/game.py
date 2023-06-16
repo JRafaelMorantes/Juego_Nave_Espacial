@@ -22,6 +22,7 @@ class Game:
         self.enemy_handler = EnemyHandler()
         self.bullet_handler = BulletHandler()
         self.score = 0
+        self.max_score = 0
         self.number_death = 0
 
     def run(self):
@@ -49,13 +50,11 @@ class Game:
             self.player.update(user_input, self.bullet_handler)
             self.enemy_handler.update(self.bullet_handler, self.player)
             self.bullet_handler.update(self.player, self.enemy_handler.enemies)
-            self.score = self.enemy_handler.number_enemy_destroyed
+            self.get_score()
             if not self.player.is_alive:
                 pygame.time.delay(500)
                 self.playing = False
                 self.number_death += 1
-
-
 
     def draw(self):
         self.draw_background()
@@ -79,6 +78,11 @@ class Game:
             self.screen.blit(image, (self.x_pos_bg, self.y_pos_bg - image_height))
             self.y_pos_bg = 0
         self.y_pos_bg += self.game_speed
+    
+    def get_score(self):
+        self.score = self.enemy_handler.number_enemy_destroyed
+        if(self.score > self.max_score):
+            self.max_score = self.score
 
     def draw_menu(self):
         if self.number_death == 0:
@@ -86,9 +90,13 @@ class Game:
             self.screen.blit(text, text_rect)
         else:
             text, text_rect = text_utils.get_message("Press any Key to Restart", 30, WHITE_COLOR)
-            score, score_rect = text_utils.get_message(f"Your score is {self.score}", 30, WHITE_COLOR, height=SCREEN_HEIGHT // 2 + 50)
+            score, score_rect = text_utils.get_message(f"Your score is: {self.score}", 20, WHITE_COLOR, height=SCREEN_HEIGHT // 2 + 40)
+            maxscore, maxscore_rect = text_utils.get_message(f"Your max score is: {self.max_score}", 20, WHITE_COLOR, height=SCREEN_HEIGHT // 2 + 66)
+            number_death, number_death_rect = text_utils.get_message(f"Your death numbers is: {self.number_death}", 20, WHITE_COLOR, height=SCREEN_HEIGHT // 2 + 95)
             self.screen.blit(text, text_rect)
+            self.screen.blit(number_death, number_death_rect)
             self.screen.blit(score, score_rect)
+            self.screen.blit(maxscore, maxscore_rect)
 
     def draw_score(self):
         score, score_rect = text_utils.get_message(f'Your score is {self.score}', 20, WHITE_COLOR, 1000, 40)
