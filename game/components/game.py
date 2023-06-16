@@ -103,7 +103,6 @@ class Game:
         self.screen.blit(score, score_rect)
 
     def reset(self):
-        self.number_death = 0
         self.player.reset()
         self.enemy_handler.reset()
         self.bullet_handler.reset()
