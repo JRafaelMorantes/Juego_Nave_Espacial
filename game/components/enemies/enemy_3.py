@@ -21,12 +21,20 @@ class Enemy3:
         self.mov_x = random.choice(self.MOV_X)
         self.index = 0
         self.is_alive = True
+        self.is_destroyed = False
         self.shooting_time = 0
     
     def update(self, bullet_handler):
         if self.rect.y >= SCREEN_HEIGHT:
             self.is_alive = False
         self.shooting_time += 1
+        self.move()
+        self.shoot(bullet_handler)
+
+    def draw(self, screen):
+        screen.blit(self.image, self.rect)
+
+    def move(self):
         self.rect.y += self.SPEED_Y
         if self.mov_x == self.LEFT:
             self.rect.x -= self.SPEED_X
@@ -39,11 +47,7 @@ class Enemy3:
                 self.mov_x = self.LEFT
                 self.index = 0
         self.index += 1
-        self.shoot(bullet_handler)
-    
-    def draw(self, screen):
-        screen.blit(self.image, self.rect)
-    
+
     def shoot(self, bullet_handler):
         if self.shooting_time % self.SHOOTING_TIME == 0:
             bullet_handler.add_bullet(BULLET_ENEMY_TYPE, self.rect.center)
