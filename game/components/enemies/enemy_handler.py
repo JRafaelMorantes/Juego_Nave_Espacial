@@ -6,15 +6,16 @@ class EnemyHandler:
     def __init__(self):
         self.enemies = []
         self.number_enemy_destroyed = 0
-    
-    def update(self, bullet_handler):
+
+    def update(self, bullet_handler, player):
         self.add_enemy()
         for enemy in self.enemies:
+            self.colliderect_player(enemy, player)
             enemy.update(bullet_handler)
             if not enemy.is_alive :
                 self.number_enemy_destroyed += 1
                 self.remove_enemy(enemy)
-    
+
     def draw(self, screen):
         for enemy in self.enemies:
             enemy.draw(screen)
@@ -27,6 +28,10 @@ class EnemyHandler:
     
     def remove_enemy(self, enemy):
         self.enemies.remove(enemy)
+    
+    def colliderect_player(self,enemy, player):
+        if(enemy.rect.colliderect(player.rect)):
+            player.is_alive = False
     
     def reset(self):
         self.enemies = []

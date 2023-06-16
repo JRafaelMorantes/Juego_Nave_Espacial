@@ -47,7 +47,7 @@ class Game:
          if self.playing:
             user_input = pygame.key.get_pressed()
             self.player.update(user_input, self.bullet_handler)
-            self.enemy_handler.update(self.bullet_handler)
+            self.enemy_handler.update(self.bullet_handler, self.player)
             self.bullet_handler.update(self.player, self.enemy_handler.enemies)
             self.score = self.enemy_handler.number_enemy_destroyed
             if not self.player.is_alive:
