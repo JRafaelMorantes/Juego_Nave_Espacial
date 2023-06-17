@@ -25,9 +25,11 @@ SPACESHIP_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Spaceship/spaceship_
 BULLET = pygame.image.load(os.path.join(IMG_DIR, "Bullet/bullet_1.png"))
 
 BULLET_ENEMY = pygame.image.load(os.path.join(IMG_DIR, "Bullet/bullet_2.png"))
+BULLET_ENEMY_2 = pygame.image.load(os.path.join(IMG_DIR, "Bullet/ice_bullet.png"))
 ENEMY_1 = pygame.image.load(os.path.join(IMG_DIR, "Enemy/enemy_1.png"))
-ENEMY_2 = pygame.image.load(os.path.join(IMG_DIR, "Enemy/enemy_2.png"))
-ENEMY_3 = pygame.image.load(os.path.join(IMG_DIR, "Enemy/enemy_3.png"))
+CALATRAMIX = pygame.image.load(os.path.join(IMG_DIR, "Enemy/calatramix.png"))
+COVENANT = pygame.image.load(os.path.join(IMG_DIR, "Enemy/covenant.png"))
+ICON_OF_SIN = pygame.image.load(os.path.join(IMG_DIR, "Enemy/icon_of_sin.png"))
 
 FONT_STYLE = 'freesansbold.ttf'
 WHITE_COLOR = (255, 255, 255)

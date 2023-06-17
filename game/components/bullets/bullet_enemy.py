@@ -1,6 +1,6 @@
 import pygame
 from game.components.bullets.bullet import Bullet
-from game.utils.constants import BULLET_ENEMY ,BULLET_ENEMY_TYPE, SCREEN_HEIGHT
+from game.utils.constants import BULLET_ENEMY_2 ,BULLET_ENEMY_TYPE, SCREEN_HEIGHT
 
 class BulletEnemy(Bullet):
     WIDTH = 9 
@@ -8,7 +8,7 @@ class BulletEnemy(Bullet):
     SPEED = 20
 
     def __init__(self, center):
-        self.image = BULLET_ENEMY
+        self.image = BULLET_ENEMY_2
         self.image = pygame.transform.scale(self.image, (self.WIDTH, self.HEIGTH))
         self.type = BULLET_ENEMY_TYPE
         super().__init__(self.image,self.type, center)

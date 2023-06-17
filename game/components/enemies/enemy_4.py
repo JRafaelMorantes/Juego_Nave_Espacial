@@ -1,17 +1,17 @@
 import random
 from game.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT, BULLET_ENEMY_TYPE
 
-class Enemy2:
+class Enemy4:
     
-    X_POS_LIST = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]
-    Y_POS = 80
-    SPEED_X = 3
+    X_POS_LIST = [300]
+    Y_POS = 50
+    SPEED_X = 1
     SPEED_Y = 1
     LEFT = 'left'
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]
     INTERVAL = 100
-    SHOOTING_TIME = 30
+    SHOOTING_TIME = 10
     
     def __init__(self, image):
         self.image = image

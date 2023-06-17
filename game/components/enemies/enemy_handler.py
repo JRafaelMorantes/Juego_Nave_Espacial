@@ -1,6 +1,7 @@
 from game.components.enemies.ship import Ship
-from game.components.enemies.alien_ship import AlienShip
-from game.components.enemies.alien_warship import AlienWarShip
+from game.components.enemies.calatramix import Calatramix
+from game.components.enemies.covenant import Covenant
+from game.components.enemies.icon_of_sin import IconOfSin
 
 class EnemyHandler:
     def __init__(self):
@@ -22,9 +23,9 @@ class EnemyHandler:
     
     def add_enemy(self):
         if len(self.enemies) < 3:
-            self.enemies.append(AlienShip())
+            self.enemies.append(Covenant())
             self.enemies.append(Ship())
-            self.enemies.append(AlienWarShip())
+            self.enemies.append(Calatramix())
     
     def remove_enemy(self, enemy):
         self.enemies.remove(enemy)
