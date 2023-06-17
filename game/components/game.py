@@ -85,6 +85,7 @@ class Game:
             self.max_score = self.score
 
     def draw_menu(self):
+        self.screen.fill((0, 0, 0))
         if self.number_death == 0:
             text, text_rect = text_utils.get_message("Press any Key to Start", 30, WHITE_COLOR)
             self.screen.blit(text, text_rect)
