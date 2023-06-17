@@ -1,5 +1,4 @@
 import pygame
-
 from game.utils.constants import SPACESHIP, SCREEN_WIDTH, SCREEN_HEIGHT, BULLET_PLAYER_TYPE
 
 class Spaceship:
