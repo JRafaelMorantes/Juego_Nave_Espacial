@@ -31,6 +31,7 @@ CALATRAMIX = pygame.image.load(os.path.join(IMG_DIR, "Enemy/calatramix.png"))
 COVENANT = pygame.image.load(os.path.join(IMG_DIR, "Enemy/covenant.png"))
 ICON_OF_SIN = pygame.image.load(os.path.join(IMG_DIR, "Enemy/icon_of_sin.png"))
 DIABOLIC_SPACE_PRIEST = pygame.image.load(os.path.join(IMG_DIR, "Enemy/diabolic_space_priest.png"))
+SLAYER = pygame.image.load(os.path.join(IMG_DIR, "Enemy/slayer_space.png"))
 
 FONT_STYLE = 'freesansbold.ttf'
 WHITE_COLOR = (255, 255, 255)

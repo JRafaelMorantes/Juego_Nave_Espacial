@@ -6,7 +6,7 @@ class Enemy5:
     X_POS_LIST = [50]
     Y_POS = 1
     SPEED_X = 1
-    SPEED_Y = 0
+    SPEED_Y = 2
     LEFT = 'left'
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]

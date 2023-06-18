@@ -3,6 +3,7 @@ from game.components.enemies.calatramix import Calatramix
 from game.components.enemies.covenant import Covenant
 from game.components.enemies.icon_of_sin import IconOfSin
 from game.components.enemies.diabolic_priest import DiabolicPriest
+from game.components.enemies.slayer import Slayer
 
 class EnemyHandler:
     def __init__(self):
@@ -24,9 +25,10 @@ class EnemyHandler:
     
     def add_enemy(self):
         if len(self.enemies) < 1:
-            if self.number_enemy_destroyed >= 20:
+            if self.number_enemy_destroyed >= 6:
                 self.enemies.append(IconOfSin())
                 self.enemies.append(DiabolicPriest())
+                self.enemies.append(Slayer())
             else:
                 self.enemies.append(Covenant())
                 self.enemies.append(Ship())
