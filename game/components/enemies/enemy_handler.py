@@ -2,6 +2,7 @@ from game.components.enemies.ship import Ship
 from game.components.enemies.calatramix import Calatramix
 from game.components.enemies.covenant import Covenant
 from game.components.enemies.icon_of_sin import IconOfSin
+from game.components.enemies.diabolic_priest import DiabolicPriest
 
 class EnemyHandler:
     def __init__(self):
@@ -22,10 +23,14 @@ class EnemyHandler:
             enemy.draw(screen)
     
     def add_enemy(self):
-        if len(self.enemies) < 3:
-            self.enemies.append(Covenant())
-            self.enemies.append(Ship())
-            self.enemies.append(Calatramix())
+        if len(self.enemies) < 1:
+            if self.number_enemy_destroyed >= 20:
+                self.enemies.append(IconOfSin())
+                self.enemies.append(DiabolicPriest())
+            else:
+                self.enemies.append(Covenant())
+                self.enemies.append(Ship())
+                self.enemies.append(Calatramix())
     
     def remove_enemy(self, enemy):
         self.enemies.remove(enemy)

@@ -4,8 +4,8 @@ import random
 from game.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 class Power:
-    POWER_WIDTH = 30
-    POWER_HEIGHT = 30
+    POWER_WIDTH = 40
+    POWER_HEIGHT = 40
     POWER_SPEED = 10
 
     def __init__(self, image, type):

@@ -4,8 +4,8 @@ from game.utils.constants import ICON_OF_SIN
 
 class IconOfSin(Enemy4):
     
-    WIDTH = 670
-    HEIGHT = 430
+    WIDTH = 560
+    HEIGHT = 340
     
     def __init__(self):
         self.image = ICON_OF_SIN
