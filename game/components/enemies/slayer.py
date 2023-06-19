@@ -4,8 +4,8 @@ from game.utils.constants import SLAYER
 
 class Slayer(Enemy6):
     
-    WIDTH = 190
-    HEIGHT = 130
+    WIDTH = 210
+    HEIGHT = 160
     
     def __init__(self):
         self.image = SLAYER

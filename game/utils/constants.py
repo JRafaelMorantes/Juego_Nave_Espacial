@@ -21,7 +21,7 @@ DEFAULT_TYPE = "default"
 SHIELD_TYPE = 'shield'
 
 SPACESHIP = pygame.image.load(os.path.join(IMG_DIR, "Spaceship/spaceship.png"))
-SPACESHIP_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Spaceship/spaceship_shield.png"))
+SPACESHIP_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Spaceship/ship_shield.png"))
 BULLET = pygame.image.load(os.path.join(IMG_DIR, "Bullet/bullet_1.png"))
 
 BULLET_ENEMY = pygame.image.load(os.path.join(IMG_DIR, "Bullet/bullet_2.png"))
@@ -32,6 +32,10 @@ COVENANT = pygame.image.load(os.path.join(IMG_DIR, "Enemy/covenant.png"))
 ICON_OF_SIN = pygame.image.load(os.path.join(IMG_DIR, "Enemy/icon_of_sin.png"))
 DIABOLIC_SPACE_PRIEST = pygame.image.load(os.path.join(IMG_DIR, "Enemy/diabolic_space_priest.png"))
 SLAYER = pygame.image.load(os.path.join(IMG_DIR, "Enemy/slayer_space.png"))
+HELLHAMMER = pygame.image.load(os.path.join(IMG_DIR, "Enemy/hellhammer.png"))
+RECRUITER = pygame.image.load(os.path.join(IMG_DIR, "Enemy/recruiter.png"))
+ULDAMAR = pygame.image.load(os.path.join(IMG_DIR, "Enemy/uldamar.png"))
+ELITE_HELL = pygame.image.load(os.path.join(IMG_DIR, "Enemy/elite_hell.png"))
 
 FONT_STYLE = 'freesansbold.ttf'
 WHITE_COLOR = (255, 255, 255)

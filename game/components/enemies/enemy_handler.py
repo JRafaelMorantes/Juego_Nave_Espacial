@@ -4,6 +4,9 @@ from game.components.enemies.covenant import Covenant
 from game.components.enemies.icon_of_sin import IconOfSin
 from game.components.enemies.diabolic_priest import DiabolicPriest
 from game.components.enemies.slayer import Slayer
+from game.components.enemies.hellhammer import Hellhammer
+from game.components.enemies.recruiter_ship import RecruiterShip
+from game.components.enemies.uldamar_ship import UldamarShip
 
 class EnemyHandler:
     def __init__(self):
@@ -25,13 +28,35 @@ class EnemyHandler:
     
     def add_enemy(self):
         if len(self.enemies) < 1:
-            if self.number_enemy_destroyed >= 6:
+            if self.number_enemy_destroyed >= 75:
                 self.enemies.append(IconOfSin())
+            elif self.number_enemy_destroyed >= 54:
+                self.enemies.append(Covenant())
+                self.enemies.append(Ship())
+                self.enemies.append(Calatramix())
+                self.enemies.append(DiabolicPriest())
+                self.enemies.append(Slayer())
+                self.enemies.append(RecruiterShip())
+                self.enemies.append(UldamarShip())
+            elif self.number_enemy_destroyed >= 48:
+                self.enemies.append(RecruiterShip())
+                self.enemies.append(UldamarShip())
+            elif self.number_enemy_destroyed >= 33:
+                self.enemies.append(Covenant())
+                self.enemies.append(Ship())
+                self.enemies.append(Calatramix())
+                self.enemies.append(DiabolicPriest())
+                self.enemies.append(Slayer())
+            elif self.number_enemy_destroyed >= 24:
+                self.enemies.append(Hellhammer())
                 self.enemies.append(DiabolicPriest())
                 self.enemies.append(Slayer())
             else:
                 self.enemies.append(Covenant())
                 self.enemies.append(Ship())
+                self.enemies.append(Calatramix())
+                self.enemies.append(Ship())
+                self.enemies.append(Covenant())
                 self.enemies.append(Calatramix())
     
     def remove_enemy(self, enemy):

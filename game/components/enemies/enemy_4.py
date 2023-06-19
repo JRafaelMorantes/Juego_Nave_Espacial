@@ -5,13 +5,13 @@ class Enemy4:
     
     X_POS_LIST = [300]
     Y_POS = 5
-    SPEED_X = 0
-    SPEED_Y = 0
+    SPEED_X = 20
+    SPEED_Y = 4
     LEFT = 'left'
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]
     INTERVAL = 100
-    SHOOTING_TIME = 15
+    SHOOTING_TIME = 5
     
     def __init__(self, image):
         self.image = image
