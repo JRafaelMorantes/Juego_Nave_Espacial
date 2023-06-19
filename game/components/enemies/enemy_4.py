@@ -11,7 +11,7 @@ class Enemy4:
     RIGHT = 'right'
     MOV_X = [LEFT, RIGHT]
     INTERVAL = 100
-    SHOOTING_TIME = 5
+    SHOOTING_TIME = 3
     
     def __init__(self, image):
         self.image = image
