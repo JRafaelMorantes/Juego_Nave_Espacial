@@ -10,7 +10,7 @@ empezaras con 3 naves sencillas, cada una comanda una unidad extra, luego de aca
 
 el objetivo del juego sera superar cada puntaje que llegues, al puntaje 100, las cosas ya no seran lo que fueron
 
-# Poder Inmunidad
+# Poder de Inmunidad Balistica
 
 La poder te hara inmune frente a las balas, pero no contra las naves si llegan a tocarte, evitalas a toda costa, tu nave pasara de un simple prototipo de la UAC, a la mejor nave de combate a distancia
 
