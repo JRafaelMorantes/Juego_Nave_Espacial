@@ -1,5 +1,4 @@
-
-![Uploading descarga.gif…]()
+![tumblr_0a72814402c6ffc47350e865550c7113_dd794a81_400](https://github.com/JRafaelMorantes/Juego_Nave_Espacial/assets/136393666/d73212e9-4dba-435a-9c1e-65aecf40e078)
 
 
 
