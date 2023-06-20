@@ -20,5 +20,6 @@ el objetivo de la mision sera superar cada puntaje que llegues, al puntaje 100, 
 
 La poder te hara inmune frente a las balas, pero no contra las naves si llegan a tocarte, evitalas a toda costa, tu nave pasara de un simple prototipo de la UAV, a la mejor nave de combate a distancia creada por el SPQR
 
-recuerda soldado, eres el unico que evitara la extincion de nuestra raza, salve cesar y el senado romano, AVE
+recuerda soldado, eres el unico que evitara la extincion de nuestra raza, salve cesar y el senado de la nueva romana
+AVE
 
