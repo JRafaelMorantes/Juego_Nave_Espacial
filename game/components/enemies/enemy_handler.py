@@ -28,7 +28,16 @@ class EnemyHandler:
     
     def add_enemy(self):
         if len(self.enemies) < 1:
-            if self.number_enemy_destroyed >= 75:
+            if self.number_enemy_destroyed >= 100:
+                self.enemies.append(IconOfSin())
+                self.enemies.append(Covenant())
+                self.enemies.append(Ship())
+                self.enemies.append(Calatramix())
+                self.enemies.append(DiabolicPriest())
+                self.enemies.append(Slayer())
+                self.enemies.append(RecruiterShip())
+                self.enemies.append(UldamarShip())
+            elif self.number_enemy_destroyed >= 75:
                 self.enemies.append(IconOfSin())
             elif self.number_enemy_destroyed >= 54:
                 self.enemies.append(Covenant())
